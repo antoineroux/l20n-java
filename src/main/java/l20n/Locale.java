@@ -10,9 +10,9 @@ import l20n.compiler.Compiler;
 
 public class Locale {
     
-    List<Resource> resources = new ArrayList<>();
+    private List<Resource> resources = new ArrayList<>();
     
-    Map<String, Entity> entities = new HashMap<>();
+    private Map<String, Entity> entities = new HashMap<>();
     
     public void compile() {
         Compiler compiler = new Compiler();
@@ -26,7 +26,7 @@ public class Locale {
     
     public String getValue(String id) {
         Entity entity = entities.get(id);
-        if (entity == null) return "";
+        if (entity == null) return id;
         
         return entity.getValue();
     }

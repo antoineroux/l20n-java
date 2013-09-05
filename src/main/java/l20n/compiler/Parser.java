@@ -15,11 +15,12 @@ import l20n.compiler.ast.IndexNode;
 import l20n.compiler.ast.LolAst;
 import l20n.compiler.ast.StringValueNode;
 import l20n.compiler.ast.ValueNode;
-import l20n.exceptions.LolIOException;
-import l20n.exceptions.SyntaxException;
 
 public class Parser {
     
+    /**
+     * The stream reader used to navigate the InputStream.
+     */
     private PushbackReader isr;
     
     /**
@@ -27,6 +28,9 @@ public class Parser {
      */
     private char currentChar;
     
+    /**
+     * Whether the end of the file is reached.
+     */
     private boolean eofReached = false;
     
     /**
@@ -214,6 +218,15 @@ public class Parser {
         return hashValueNode;
     }
     
+    /**
+     * Tells whether a hash identifier is marked as being the default. 
+     * 
+     * If it is the default, this method will swallow the '*' so that the 
+     * identifier is ready to be read. If it is not, it will unread the
+     * character.
+     * 
+     * @return  whether the is default, or not.
+     */
     private boolean isMarkedAsDefault() {
         getNextChar();
         if (currentChar == '*') {
@@ -225,6 +238,12 @@ public class Parser {
         }
     }
     
+    /**
+     * Reads an index. For now, the implementation is really simplified, it only
+     * reads an index composed of strings.
+     * 
+     * @return
+     */
     private IndexNode getIndex() {
         IndexNode indexNode = new IndexNode();
         

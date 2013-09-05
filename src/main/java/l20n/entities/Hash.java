@@ -3,7 +3,6 @@ package l20n.entities;
 import java.util.HashMap;
 import java.util.Map;
 
-import l20n.exceptions.EntityFormatException;
 
 public class Hash {
     
@@ -22,6 +21,11 @@ public class Hash {
         hash.put(id, value);
     }
     
+    /**
+     * 
+     * @param id the element to retrieve.
+     * @return a String or another Hash, depending on what is contained in the hash.
+     */
     public Object get(String id) {
         return hash.get(id);
     }

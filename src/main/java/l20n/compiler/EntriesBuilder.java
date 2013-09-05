@@ -27,10 +27,6 @@ public class EntriesBuilder implements Visitor {
     
     private int currentDepth = 0;
 
-    public EntriesBuilder() {
-        // TODO Auto-generated constructor stub
-    }
-
     @Override
     public void visit(LolAst lolAst) {
         // Do nothing

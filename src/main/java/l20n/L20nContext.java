@@ -35,7 +35,6 @@ public class L20nContext {
     }
     
     public String get(String identifier) {
-        
         return locales.get("default").getValue(identifier);
     }
 

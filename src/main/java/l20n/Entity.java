@@ -23,6 +23,7 @@ public class Entity {
     }
 
     public String getValue() {
+        // The entity was not correctly initialised.
         if (stringValue == null && hashValue == null) return id;
         
         if(stringValue != null) {
@@ -34,14 +35,11 @@ public class Entity {
             else return id;
         }
         
-        String value = null; 
-        
-            
         Object valueFromHash = hashValue;
         for (String expression: index) {
             if (valueFromHash instanceof String) {
                 // There is no way to keep going down the hash while we
-                // have at least on expression left. This is a dead-end.
+                // have at least one expression left. This is a dead-end.
                 valueFromHash = null;
                 break;
             }
@@ -49,13 +47,9 @@ public class Entity {
         }
         
         if(valueFromHash instanceof String) {
-            value = (String) valueFromHash;
+            return (String) valueFromHash;
         }
-        
-        // If there is no default value.
-        if (value == null) return id;
-        
-        return value;
+        else return id;
     }
     
     public void setStringValue(String value) {
