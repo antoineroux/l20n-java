@@ -7,7 +7,7 @@ public class HashValueNode implements ValueNode {
     
     private final int depth;
 
-    private List<HashItemNode> hashItems = new ArrayList<>();
+    private List<HashItemNode> hashItems = new ArrayList<HashItemNode>();
     
     private Node parent;
     

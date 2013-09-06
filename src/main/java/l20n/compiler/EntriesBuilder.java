@@ -17,14 +17,27 @@ import l20n.entities.Hash;
 
 public class EntriesBuilder implements Visitor {
     
-    private Map<String, Entity> entities = new HashMap<>();
+    /**
+     * The entitites that were created, indexed by their ID.
+     */
+    private Map<String, Entity> entities = new HashMap<String, Entity>();
     
+    /**
+     * The ID of the entity currently being walked.
+     */
     private String currentEntityId = "";
     
+    /**
+     * The ID in the hash currently being walked.
+     */
     private String currentHashId = "";
     
-    private Stack<Hash> hashStack = new Stack<>();
     
+    private Stack<Hash> hashStack = new Stack<Hash>();
+    
+    /**
+     * The current depth in the hash tree. 0 means there is no hash.
+     */
     private int currentDepth = 0;
 
     @Override

@@ -42,3 +42,16 @@ when the implementation is complete:
  - Provide tools helping to move away from Properties files.
  - Integration with Spring/Spring MVC.
  - Async implementation.
+
+Building
+--------
+
+l20n-java requires Java 6 or above. The project itself is meant to be compatible with Java 6.
+
+To run the tests, from the command line run:
+
+    ./gradlew test
+
+Or under Windows :
+
+    gradlew.bat test

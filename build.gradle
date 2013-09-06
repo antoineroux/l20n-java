@@ -3,6 +3,10 @@ apply plugin: 'groovy'
 apply plugin: 'eclipse'
 
 
+// The project is compatible with Java 6.
+sourceCompatibility = '1.6'
+targetCompatibility = '1.6'
+
 repositories {
     // Use 'maven central' for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.

@@ -10,9 +10,9 @@ import l20n.compiler.Compiler;
 
 public class Locale {
     
-    private List<Resource> resources = new ArrayList<>();
+    private List<Resource> resources = new ArrayList<Resource>();
     
-    private Map<String, Entity> entities = new HashMap<>();
+    private Map<String, Entity> entities = new HashMap<String, Entity>();
     
     public void compile() {
         Compiler compiler = new Compiler();

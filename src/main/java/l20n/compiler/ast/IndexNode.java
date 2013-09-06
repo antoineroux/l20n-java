@@ -13,7 +13,7 @@ public class IndexNode implements Node {
     /**
      * For now, the expressions are simply strings.
      */
-    List<String> expressions = new ArrayList<>();
+    List<String> expressions = new ArrayList<String>();
 
     
 //    public IndexNode(String valueNode) {

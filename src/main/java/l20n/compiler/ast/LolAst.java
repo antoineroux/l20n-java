@@ -5,7 +5,7 @@ import java.util.List;
 
 public class LolAst implements Node {
     
-    List<EntryNode> entries = new ArrayList<>();
+    List<EntryNode> entries = new ArrayList<EntryNode>();
     
     public void addEntry(EntryNode entry) {
         entries.add(entry);

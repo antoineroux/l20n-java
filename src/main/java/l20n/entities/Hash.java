@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Hash {
     
-    private Map<String, Object> hash = new HashMap<>();
+    private Map<String, Object> hash = new HashMap<String, Object>();
     
     private String defaultKey;
     
